@@ -1,0 +1,16 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Maven Pro' , sans-serif;
+}
+a{
+  list-style: none;
+}
+li{
+  list-style: none;
+}
+/* .app{
+  width: 65%;
+  margin: auto;
+} */
