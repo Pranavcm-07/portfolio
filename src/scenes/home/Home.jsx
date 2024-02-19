@@ -1,9 +1,15 @@
 import { Box, Button, CardMedia, Typography } from "@mui/material";
 import DescriptionIcon from "@mui/icons-material/Description";
 
-const Intro = () => {
+const Home = () => {
   return (
-    <Box sx={{ width: "70%", margin: "auto", display: "flex" }}>
+    <Box
+      sx={{
+        width: "70%",
+        margin: "auto",
+        display: "flex",
+      }}
+    >
       <Box sx={{ width: "60%" }}>
         <Typography
           sx={{
@@ -138,4 +144,4 @@ const Intro = () => {
   );
 };
 
-export default Intro;
+export default Home;

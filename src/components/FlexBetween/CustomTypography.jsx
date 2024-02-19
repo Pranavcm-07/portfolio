@@ -1,5 +1,11 @@
 import { Typography } from "@mui/material";
 const CustomTypography = ({ item }) => {
+  const handleClick = () => {
+    const section = document.getElementById(`${item}`);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <Typography
       sx={{
@@ -8,9 +14,11 @@ const CustomTypography = ({ item }) => {
         "&:hover": {
           color: "#ffc107",
         },
+        cursor: "pointer",
       }}
     >
       <span
+        onClick={handleClick}
         data-hover={item}
         style={{
           position: "relative",

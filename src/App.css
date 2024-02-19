@@ -6,6 +6,8 @@
 }
 a{
   list-style: none;
+  text-decoration: none;
+  color: grey;
 }
 li{
   list-style: none;
@@ -14,3 +16,6 @@ li{
   width: 65%;
   margin: auto;
 } */
+html{
+  scroll-behavior: smooth;
+}

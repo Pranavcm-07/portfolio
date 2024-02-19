@@ -5,10 +5,19 @@ import CustomTypography from "../../components/FlexBetween/CustomTypography";
 
 const Navbar = () => {
   return (
-    <Box sx={{ width: "70%", margin: "auto" }}>
+    <Box
+      sx={{
+        width: "100%",
+        padding: "15px 20px",
+        backgroundColor: "white",
+        zIndex: "9999",
+        position: "sticky",
+      }}
+    >
       <FlexBetween
         sx={{
-          mt: "20px",
+          width: "70%",
+          margin: "auto",
         }}
       >
         <Typography
