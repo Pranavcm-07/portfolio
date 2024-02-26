@@ -125,15 +125,15 @@ const Home = () => {
         >
           <CardMedia
             component="img"
-            image="../public/images.png"
+            image="../public/see-profile-gentlema-11563886739l6i9igwwuz-removebg-preview.png"
             sx={{
               position: "absolute",
-              width: "300px",
-              left: "50px",
-              top: "-170px",
-              zIndex: "999",
-              mixBlendMode: "multiply",
-              objectFit: "contain",
+              width: "400px",
+              left: "10px",
+              top: "-155px",
+              // zIndex: "999",
+              // mixBlendMode: "screen",
+              // objectFit: "cover",
               borderRadius: "20px",
             }}
             alt="Paella dish"

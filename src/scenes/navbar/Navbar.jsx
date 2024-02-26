@@ -1,7 +1,7 @@
 import { IconButton, Typography, Box } from "@mui/material";
-import FlexBetween from "../../components/FlexBetween/FlexBetween";
+import FlexBetween from "../../components/FlexBetween";
 import LightModeIcon from "@mui/icons-material/LightMode";
-import CustomTypography from "../../components/FlexBetween/CustomTypography";
+import CustomTypography from "../../components/CustomTypography";
 
 const Navbar = () => {
   return (
