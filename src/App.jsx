@@ -4,6 +4,7 @@ import About from "./scenes/about/About";
 import Home from "./scenes/home/Home";
 import Navbar from "./scenes/navbar/Navbar";
 import Projects from "./scenes/projects/Projects";
+import Footer from "./scenes/footer/Footer";
 function App() {
   return (
     <div className="app">
@@ -53,6 +54,16 @@ function App() {
         }}
       >
         <Projects />
+      </section>
+      <section
+        id="Footer"
+        style={{
+          padding: "80px 0 40px",
+          backgroundColor: "black",
+          color: "white",
+        }}
+      >
+        <Footer />
       </section>
     </div>
   );
