@@ -5,6 +5,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 const Footer = () => {
+  const date = new Date().getFullYear();
   return (
     <Box sx={{ width: "85%", margin: "auto", padding: "30px" }}>
       <Box>
@@ -131,7 +132,7 @@ const Footer = () => {
             gap: "5px",
           }}
         >
-          © Copyright 2024. Made by
+          © Copyright {date}. Made by
           <Typography sx={{ fontWeight: "500", fontSize: "13px" }}>
             Pranav CM
           </Typography>

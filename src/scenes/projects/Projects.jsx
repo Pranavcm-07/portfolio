@@ -53,7 +53,7 @@ const Projects = () => {
             alignItems: "center",
             backgroundColor: "#white",
             borderRadius: "10px",
-            boxShadow: "0 0 10px #ccc",
+            boxShadow: "1px 1px 40px #ccc",
           }}
         >
           <Box
@@ -208,7 +208,7 @@ const Projects = () => {
                     color: "black",
                     fontWeight: "500",
                     borderRadius: "20px",
-                    backgroundColor: "#eee",
+                    backgroundColor: "#e9e9e9",
                   }}
                 >
                   {item}
