@@ -1,4 +1,4 @@
-import { Box, Button, TextField, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import CustomTextField from "../../components/CustomTextField";
 
 const Contact = () => {
@@ -73,7 +73,7 @@ const Contact = () => {
           label="Message"
           name="message"
           multiline
-          rows={5}
+          minRows={5}
           sx={{
             borderRadius: "30px",
           }}

@@ -1,5 +1,34 @@
 {
     "skills": [
-        "HTML","CSS","JavaScript","ReactJS","Python","C++","Git","Postman","MaterialUI","MongoDB","MySQL","NodeJS","ExpressJS","Redux","Versel","Bootstrap"
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "ReactJS",
+        "Python",
+        "C++",
+        "Git",
+        "Postman",
+        "MaterialUI",
+        "MongoDB",
+        "MySQL",
+        "NodeJS",
+        "ExpressJS",
+        "Redux",
+        "Versel",
+        "Bootstrap"
+    ],
+    "experience":[
+        {
+            "course":"Computer Science",
+            "timeline":"2012-2022",
+            "location":"Adhyapana School CBSE, Madurai",
+            "content":"Marks: 96.4%"
+        },
+        {
+            "course":"Electrical and Electronics Engineering",
+            "timeline":"2022-2026",
+            "location":"SSN College Of Engineering",
+            "content":"CGPA: 8.66 (1st year)"
+        }
     ]
 }

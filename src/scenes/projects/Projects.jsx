@@ -1,4 +1,4 @@
-import { Box, Button, CardMedia, Fade, Link, Typography } from "@mui/material";
+import { Box, Button, CardMedia, Link, Slide, Typography } from "@mui/material";
 import { useState } from "react";
 
 const Projects = () => {
@@ -76,10 +76,9 @@ const Projects = () => {
                 objectFit: "cover",
                 transition: ".2s ease",
                 transform: hover ? "scale(1.075)" : "scale(1)",
-                filter: hover && "blur(0.7rem)",
               }}
             />
-            <Fade in={hover}>
+            <Slide in={hover} direction="up">
               <Box
                 sx={{
                   height: "100%",
@@ -93,43 +92,26 @@ const Projects = () => {
                   justifyContent: "center",
                   alignItems: "center",
                   flexDirection: "column",
+                  background: "linear-gradient(rgba(0,0,0,0.3),#ffc107)",
                 }}
               >
-                <Typography
-                  sx={{
-                    fontSize: "20px",
-                    fontWeight: "400",
-                    color: "white",
-                    textAlign: "center",
-                  }}
-                >
-                  Built on the MERN stack
-                </Typography>
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    gap: "20px",
-                    mt: "20px",
-                  }}
-                >
+                <Box sx={{ position: "absolute", bottom: "40px" }}>
                   <Button
                     variant="outlined"
                     sx={{
-                      color: "white",
                       border: "1px solid #ffc107",
                       borderRadius: "20px",
+                      backgroundColor: "white",
                       "&:hover": {
-                        color: "white",
-                        backgroundColor: "#ffc107",
+                        backgroundColor: "white",
                         border: "1px solid #ffc107",
                       },
+                      mr: "50px",
                     }}
                   >
                     <Link
                       underline="none"
-                      color="white"
+                      color="#ffc107"
                       href="https://connectify-socialmedia.vercel.app/"
                       target="_blank"
                     >
@@ -139,19 +121,18 @@ const Projects = () => {
                   <Button
                     variant="outlined"
                     sx={{
-                      color: "white",
                       border: "1px solid #ffc107",
                       borderRadius: "20px",
+                      backgroundColor: "white",
                       "&:hover": {
-                        color: "white",
-                        backgroundColor: "#ffc107",
+                        backgroundColor: "white",
                         border: "1px solid #ffc107",
                       },
                     }}
                   >
                     <Link
                       underline="none"
-                      color="white"
+                      color="#ffc107"
                       href="https://github.com/Pranavcm-07/socialmedia-website-frontend.git"
                       target="_blank"
                     >
@@ -160,7 +141,7 @@ const Projects = () => {
                   </Button>
                 </Box>
               </Box>
-            </Fade>
+            </Slide>
           </Box>
           <Box
             width="50%"

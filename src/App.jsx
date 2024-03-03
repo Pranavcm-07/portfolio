@@ -6,6 +6,7 @@ import Navbar from "./scenes/navbar/Navbar";
 import Projects from "./scenes/projects/Projects";
 import Footer from "./scenes/footer/Footer";
 import Contact from "./scenes/contact/Contact";
+import Experience from "./scenes/experience/Experience";
 function App() {
   return (
     <div className="app">
@@ -13,53 +14,50 @@ function App() {
       <section
         id="Home"
         style={{
-          padding: "250px 0 150px 0",
-          backgroundColor: "rgba(255, 255, 255, 0.2)", // Background color with opacity
-          backgroundBlendMode: "overlay", // Blend mode to apply the gradient over the background color
-          backgroundImage: `
-    linear-gradient(30deg, #f8f8f8 12%, transparent 12.5%, transparent 87%, #f8f8f8 87.5%, #f8f8f8),
-    linear-gradient(150deg, #f8f8f8 12%, transparent 12.5%, transparent 87%, #f8f8f8 87.5%, #f8f8f8),
-    linear-gradient(30deg, #f8f8f8 12%, transparent 12.5%, transparent 87%, #f8f8f8 87.5%, #f8f8f8),
-    linear-gradient(150deg, #f8f8f8 12%, transparent 12.5%, transparent 87%, #f8f8f8 87.5%, #f8f8f8),
-    linear-gradient(60deg, #f8f8f877 25%, transparent 25.5%, transparent 75%, #f8f8f877 75%, #f8f8f877),
-    linear-gradient(60deg, #f8f8f877 25%, transparent 25.5%, transparent 75%, #f8f8f877 75%, #f8f8f877)
-  `,
-          backgroundSize: "80px 140px",
-          backgroundPosition: "0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px",
+          padding: "250px 0 210px 0",
         }}
       >
         <Home />
       </section>
-      <section style={{ position: "relative" }}>
-        <section
-          id="About"
-          style={{
-            padding: "70px 0",
-          }}
-        >
-          <About />
-        </section>
-        <section
-          id="Skills"
-          style={{
-            padding: "80px 0",
-          }}
-        >
-          <Skills />
-        </section>
+      <section
+        id="About"
+        style={{
+          padding: "70px 0 20px",
+          backgroundColor: "#f7f7f7",
+        }}
+      >
+        <About />
+      </section>
+      <section
+        id="Skills"
+        style={{
+          padding: "80px 0",
+        }}
+      >
+        <Skills />
       </section>
       <section
         id="Projects"
         style={{
           padding: "80px 0",
+          backgroundColor: "#f7f7f7",
         }}
       >
         <Projects />
       </section>
       <section
+        id="Experience"
+        style={{
+          padding: "80px 0 130px",
+        }}
+      >
+        <Experience />
+      </section>
+      <section
         id="Contact"
         style={{
           padding: "80px 0",
+          backgroundColor: "#f7f7f7",
         }}
       >
         <Contact />

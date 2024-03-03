@@ -73,26 +73,28 @@ const Home = () => {
             }}
           >
             <DescriptionIcon
-              sx={{ color: "#5b5b5b", fontSize: "15px", transition: "0.3s" }}
+              sx={{ color: "black", fontSize: "15px", transition: "0.3s" }}
             />
             <Typography
               sx={{
-                color: "#5b5b5b",
+                color: "black",
                 fontWeight: "700",
                 fontSize: "12px",
-                transition: "0.3s",
+                transition: "0.1s",
               }}
             >
               Download Resume
             </Typography>
           </Button>
           <Button
+            href="https://github.com/Pranavcm-07"
+            target="_blank"
             sx={{
               padding: "13px 29px",
               display: "flex",
               gap: "7px",
               alignItems: "center",
-              backgroundColor: "#474559",
+              backgroundColor: "black",
               borderRadius: "50px",
 
               "&:hover": {
@@ -105,10 +107,10 @@ const Home = () => {
                 color: "white",
                 fontWeight: "700",
                 fontSize: "12px",
-                transition: "0.3s",
+                transition: "0.1s",
               }}
             >
-              Contact Me
+              GITHUB
             </Typography>
           </Button>
         </Box>

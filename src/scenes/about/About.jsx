@@ -1,8 +1,14 @@
-import { Box, Typography, CardMedia } from "@mui/material";
+import { Box, Typography, CardMedia, Button } from "@mui/material";
 
 const About = () => {
+  const handleClick = () => {
+    const section = document.getElementById(`Contact`);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
-    <Box sx={{ width: "70%", height: "500px", margin: "auto" }}>
+    <Box sx={{ width: "90%", height: "auto", margin: "auto" }}>
       <Typography
         sx={{
           fontSize: "40px",
@@ -28,23 +34,22 @@ const About = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          mt: "50px",
+          mt: "10px",
+          padding: "20px",
+          gap: "20px",
         }}
       >
-        <Box width={"50%"}>
+        <Box
+          sx={{
+            margin: "auto",
+          }}
+        >
           <CardMedia
             component="img"
-            image="../public/images.png"
+            image="../public/7712733_3714961.svg"
             sx={{
-              // position: "absolute",
-              width: "250px",
-              // left: "50px",
-              // top: "-170px",
-              // zIndex: "999",
-              mixBlendMode: "multiply",
-              // objectFit: "contain",
+              width: "500px",
               borderRadius: "20px",
-              ml: "50px",
             }}
             alt="Paella dish"
           />
@@ -53,7 +58,6 @@ const About = () => {
           sx={{
             width: "50%",
             padding: "20px",
-            backgroundColor: "white",
             borderRadius: "30px",
           }}
         >
@@ -78,6 +82,37 @@ const About = () => {
               cricket. Additionally, I'm an avid Rubik's Cube enthusiast.
             </Typography>
           </Box>
+          <Button
+            onClick={handleClick}
+            sx={{
+              padding: "10px 20px",
+              display: "flex",
+              gap: "7px",
+              alignItems: "center",
+              border: "1px solid #ffc107",
+              borderRadius: "50px",
+              backgroundColor: "#ffc107",
+
+              "&:hover": {
+                backgroundColor: "white",
+                "& .MuiTypography-root": {
+                  color: "#ffc107",
+                },
+              },
+              mt: "50px",
+            }}
+          >
+            <Typography
+              sx={{
+                color: "white",
+                fontWeight: "700",
+                fontSize: "12px",
+                transition: "0.1s",
+              }}
+            >
+              CONTACT ME
+            </Typography>
+          </Button>
         </Box>
       </Box>
     </Box>

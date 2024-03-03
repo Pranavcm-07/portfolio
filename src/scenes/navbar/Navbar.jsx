@@ -1,23 +1,30 @@
-import { IconButton, Typography, Box } from "@mui/material";
+import { Typography, Box, Link, IconButton } from "@mui/material";
 import FlexBetween from "../../components/FlexBetween";
-import LightModeIcon from "@mui/icons-material/LightMode";
 import CustomTypography from "../../components/CustomTypography";
-
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TwitterIcon from "@mui/icons-material/Twitter";
 const Navbar = () => {
   return (
     <Box
       sx={{
         width: "100%",
         padding: "15px 20px",
-        backgroundColor: "white",
+        backgroundColor: "rgba(255,255,255)",
         zIndex: "9999",
-        position: "sticky",
+        position: "fixed",
+        borderBottom: "1px solid #eee",
       }}
     >
-      <FlexBetween
+      <Box
         sx={{
-          width: "70%",
+          width: "95%",
           margin: "auto",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          position: "relative",
         }}
       >
         <Typography
@@ -27,15 +34,17 @@ const Navbar = () => {
             "&:hover": {
               color: "#ffc107",
             },
-            transition: "0.3s",
+            transition: "0.1s",
+            position: "absolute",
+            left: "0",
           }}
         >
-          Pranav
+          Pranav.dev
         </Typography>
         <FlexBetween
           sx={{
             gap: "30px",
-            color: "grey",
+            color: "black",
           }}
         >
           <CustomTypography item={"Home"} />
@@ -45,10 +54,54 @@ const Navbar = () => {
           <CustomTypography item={"Experience"} />
           <CustomTypography item={"Contact"} />
         </FlexBetween>
-        <IconButton sx={{ fontSize: "30px" }}>
-          <LightModeIcon sx={{ color: "black" }} />
-        </IconButton>
-      </FlexBetween>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "5px",
+            position: "absolute",
+            right: "0",
+          }}
+        >
+          <Link
+            href="https://www.linkedin.com/in/pranav-cm-929129249/"
+            target="_blank"
+            rel="noopener"
+          >
+            <IconButton>
+              <LinkedInIcon sx={{ fontSize: "20px", color: "black" }} />
+            </IconButton>
+          </Link>
+          <Link
+            href="https://twitter.com/pranavcm_07"
+            target="_blank"
+            rel="noopener"
+          >
+            <IconButton>
+              <TwitterIcon sx={{ fontSize: "20px", color: "black" }} />
+            </IconButton>
+          </Link>
+          <Link
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener"
+          >
+            <IconButton>
+              <InstagramIcon sx={{ fontSize: "20px", color: "black" }} />
+            </IconButton>
+          </Link>
+          <Link
+            href="https://github.com/Pranavcm-07"
+            target="_blank"
+            rel="noopener"
+          >
+            <IconButton>
+              <GitHubIcon sx={{ fontSize: "20px", color: "black" }} />
+            </IconButton>
+          </Link>
+        </Box>
+      </Box>
     </Box>
   );
 };

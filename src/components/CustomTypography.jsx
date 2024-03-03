@@ -23,7 +23,7 @@ const CustomTypography = ({ item }) => {
         style={{
           position: "relative",
           display: "inline-block",
-          transition: "0.3s",
+          transition: "0.1s",
         }}
       >
         {item}
