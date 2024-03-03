@@ -15,6 +15,7 @@ function App() {
         id="Home"
         style={{
           padding: "250px 0 210px 0",
+          backgroundColor: "black",
         }}
       >
         <Home />
@@ -23,7 +24,7 @@ function App() {
         id="About"
         style={{
           padding: "70px 0 20px",
-          backgroundColor: "#f7f7f7",
+          backgroundColor: "black",
         }}
       >
         <About />
@@ -32,6 +33,7 @@ function App() {
         id="Skills"
         style={{
           padding: "80px 0",
+          backgroundColor: "black",
         }}
       >
         <Skills />
@@ -40,7 +42,7 @@ function App() {
         id="Projects"
         style={{
           padding: "80px 0",
-          backgroundColor: "#f7f7f7",
+          backgroundColor: "black",
         }}
       >
         <Projects />
@@ -49,6 +51,7 @@ function App() {
         id="Experience"
         style={{
           padding: "80px 0 130px",
+          backgroundColor: "black",
         }}
       >
         <Experience />
@@ -57,7 +60,7 @@ function App() {
         id="Contact"
         style={{
           padding: "80px 0",
-          backgroundColor: "#f7f7f7",
+          backgroundColor: "black",
         }}
       >
         <Contact />
@@ -65,7 +68,7 @@ function App() {
       <section
         id="Footer"
         style={{
-          padding: "80px 0 40px",
+          padding: "20px 0 10px",
           backgroundColor: "black",
           color: "white",
         }}

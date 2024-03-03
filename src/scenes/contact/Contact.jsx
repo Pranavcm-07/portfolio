@@ -8,7 +8,7 @@ const Contact = () => {
         sx={{
           fontSize: "40px",
           fontWeight: "700",
-          color: "black",
+          color: "white",
           textAlign: "center",
           mb: "10px",
         }}
@@ -30,6 +30,7 @@ const Contact = () => {
           fontSize: "20px",
           width: "65%",
           margin: " 20px auto",
+          color: "white",
         }}
       >
         Need to reach out faster than a pizza delivery on a Friday night? Look
@@ -42,7 +43,7 @@ const Contact = () => {
           gap: "30px",
           gridTemplateColumns: "1fr",
           padding: "30px",
-          boxShadow: "1px 1px 10px #aaa",
+          border: "1px solid #aaa",
           borderRadius: "20px",
           width: "60%",
           margin: "40px auto",

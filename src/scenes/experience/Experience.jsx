@@ -9,7 +9,7 @@ const Experience = () => {
         sx={{
           fontSize: "40px",
           fontWeight: "700",
-          color: "black",
+          color: "white",
           textAlign: "center",
           mb: "10px",
         }}
@@ -34,9 +34,6 @@ const Experience = () => {
           alignItems: "center",
           flexDirection: "column",
           gap: "30px",
-          //   position: "relative",
-          //   width: "auto",
-          //   height: "45vh",
         }}
       >
         {experience.map((item, index) => (
@@ -50,13 +47,12 @@ const Experience = () => {
               sx={{
                 padding: "15px",
                 borderRadius: "15px",
-                boxShadow: "1px 1px 10px #aaa",
+                border: "1px solid #aaa",
                 width: "50%",
-                // position: "absolute",
-                // left: index % 2 == 0 ? "0" : "50%",
                 marginLeft: index % 2 == 1 && "50%",
                 borderLeft: index % 2 == 0 && "7px solid #ffc107",
                 borderRight: index % 2 == 1 && "7px solid #ffc107",
+                color: "white",
               }}
             >
               <Typography
@@ -68,18 +64,21 @@ const Experience = () => {
               >
                 {item.course}
               </Typography>
-              <Typography sx={{ fontSize: "12px", color: "rgb(90,90,90)" }}>
+              <Typography
+                sx={{ fontSize: "12px", color: "rgba(255, 193, 7,0.8)" }}
+              >
                 {item.timeline}
               </Typography>
               <Typography
                 sx={{
                   fontSize: "17px",
                   fontWeight: "300",
+                  color: "#aaa",
                 }}
               >
                 {item.location}
               </Typography>
-              <Typography>{item.content}</Typography>
+              <Typography sx={{ color: "#aaa" }}>{item.content}</Typography>
             </Box>
           </Box>
         ))}

@@ -2,6 +2,9 @@ import { TextField } from "@mui/material";
 import { styled } from "@mui/system";
 
 const CustomTextField = styled(TextField)({
+  "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+    borderColor: "#aaa",
+  },
   "& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline": {
     borderColor: "rgb(255, 193, 7)",
   },
@@ -10,6 +13,9 @@ const CustomTextField = styled(TextField)({
   },
   "& .MuiInputLabel-root.Mui-focused": {
     color: "#ffc107",
+  },
+  "& .MuiInputLabel-root": {
+    color: "#aaa",
   },
 });
 

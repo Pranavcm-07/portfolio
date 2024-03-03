@@ -7,7 +7,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 const Footer = () => {
   const date = new Date().getFullYear();
   return (
-    <Box sx={{ width: "85%", margin: "auto", padding: "30px" }}>
+    <Box sx={{ width: "90%", margin: "auto", padding: "30px" }}>
       <Box>
         <FlexBetween>
           <Box>
@@ -63,7 +63,9 @@ const Footer = () => {
                     },
                   }}
                 >
-                  <LinkedInIcon sx={{ fontSize: "30px", color: "white" }} />
+                  <LinkedInIcon
+                    sx={{ fontSize: "30px", color: "rgba(255,255,255,0.3)" }}
+                  />
                 </IconButton>
               </Link>
               <Link
@@ -78,7 +80,9 @@ const Footer = () => {
                     },
                   }}
                 >
-                  <TwitterIcon sx={{ fontSize: "30px", color: "white" }} />
+                  <TwitterIcon
+                    sx={{ fontSize: "30px", color: "rgba(255,255,255,0.3)" }}
+                  />
                 </IconButton>
               </Link>
               <Link
@@ -93,7 +97,9 @@ const Footer = () => {
                     },
                   }}
                 >
-                  <InstagramIcon sx={{ fontSize: "30px", color: "white" }} />
+                  <InstagramIcon
+                    sx={{ fontSize: "30px", color: "rgba(255,255,255,0.3)" }}
+                  />
                 </IconButton>
               </Link>
               <Link
@@ -108,18 +114,22 @@ const Footer = () => {
                     },
                   }}
                 >
-                  <GitHubIcon sx={{ fontSize: "30px", color: "white" }} />
+                  <GitHubIcon
+                    sx={{ fontSize: "30px", color: "rgba(255,255,255,0.3)" }}
+                  />
                 </IconButton>
               </Link>
             </Box>
           </Box>
         </FlexBetween>
       </Box>
-      <Divider sx={{ backgroundColor: "#aaa", margin: "20px 0" }} />
+      <Divider
+        sx={{ backgroundColor: "rgba(255,255,255,0.3)", margin: "20px 0" }}
+      />
       <Box
         sx={{
           mt: "30px",
-          color: "#fff",
+          color: "rgba(255,255,255,0.3)",
         }}
       >
         <Typography

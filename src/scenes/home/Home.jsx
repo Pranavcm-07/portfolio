@@ -28,6 +28,7 @@ const Home = () => {
             sx={{
               fontSize: "2.8em",
               fontWeight: "700",
+              color: "white",
             }}
           >
             Hey folks, I'm <span style={{ color: "#ffc107" }}>Pranav</span>
@@ -73,7 +74,7 @@ const Home = () => {
             }}
           >
             <DescriptionIcon
-              sx={{ color: "black", fontSize: "15px", transition: "0.3s" }}
+              sx={{ color: "black", fontSize: "15px", transition: "0.1s" }}
             />
             <Typography
               sx={{
@@ -96,15 +97,19 @@ const Home = () => {
               alignItems: "center",
               backgroundColor: "black",
               borderRadius: "50px",
+              border: "1px solid #ffc107",
 
               "&:hover": {
                 backgroundColor: "#ffc107",
+                "& .MuiTypography-root": {
+                  color: "white",
+                },
               },
             }}
           >
             <Typography
               sx={{
-                color: "white",
+                color: "#ffc107",
                 fontWeight: "700",
                 fontSize: "12px",
                 transition: "0.1s",

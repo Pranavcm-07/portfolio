@@ -14,7 +14,7 @@ const About = () => {
           fontSize: "40px",
           fontWeight: "700",
           margin: "10px 0",
-          color: "black",
+          color: "white",
           textAlign: "center",
         }}
       >
@@ -66,6 +66,7 @@ const About = () => {
               margin: "10px 0",
               lineHeight: "1.5",
               wordSpacing: "5px",
+              color: "white",
             }}
           >
             <Typography sx={{ fontWeight: "400" }}>
@@ -91,12 +92,12 @@ const About = () => {
               alignItems: "center",
               border: "1px solid #ffc107",
               borderRadius: "50px",
-              backgroundColor: "#ffc107",
+              backgroundColor: "black",
 
               "&:hover": {
-                backgroundColor: "white",
+                backgroundColor: "#ffc107",
                 "& .MuiTypography-root": {
-                  color: "#ffc107",
+                  color: "white",
                 },
               },
               mt: "50px",
@@ -104,7 +105,7 @@ const About = () => {
           >
             <Typography
               sx={{
-                color: "white",
+                color: "#ffc107",
                 fontWeight: "700",
                 fontSize: "12px",
                 transition: "0.1s",

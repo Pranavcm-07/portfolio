@@ -1,4 +1,6 @@
-import { Box, Button, CardMedia, Link, Slide, Typography } from "@mui/material";
+import { Box, CardMedia, IconButton, Typography } from "@mui/material";
+import LinkIcon from "@mui/icons-material/Link";
+import CodeIcon from "@mui/icons-material/Code";
 import { useState } from "react";
 
 const Projects = () => {
@@ -24,7 +26,7 @@ const Projects = () => {
         sx={{
           fontSize: "40px",
           fontWeight: "700",
-          color: "black",
+          color: "white",
           textAlign: "center",
           mb: "10px",
         }}
@@ -41,9 +43,13 @@ const Projects = () => {
         }}
       />
       <Box
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
         sx={{
           width: "80%",
           margin: "80px auto",
+          transition: ".2s ease",
+          transform: hover ? "scale(1.02)" : "scale(1)",
         }}
       >
         <Box
@@ -51,9 +57,9 @@ const Projects = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor: "#white",
             borderRadius: "10px",
-            boxShadow: "1px 1px 40px #ccc",
+            border: "1px solid #aaa",
+            borderLeft: "5px solid #ffc107",
           }}
         >
           <Box
@@ -64,8 +70,6 @@ const Projects = () => {
               borderRadius: "10px",
               position: "relative",
             }}
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
           >
             <CardMedia
               component="img"
@@ -74,11 +78,9 @@ const Projects = () => {
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
-                transition: ".2s ease",
-                transform: hover ? "scale(1.075)" : "scale(1)",
               }}
             />
-            <Slide in={hover} direction="up">
+            {/* <Slide in={hover} direction="up">
               <Box
                 sx={{
                   height: "100%",
@@ -92,7 +94,8 @@ const Projects = () => {
                   justifyContent: "center",
                   alignItems: "center",
                   flexDirection: "column",
-                  background: "linear-gradient(rgba(0,0,0,0.3),#ffc107)",
+                  background:
+                    "linear-gradient(rgba(0,0,0,0.3),rgb(255, 193, 7,0.5))",
                 }}
               >
                 <Box sx={{ position: "absolute", bottom: "40px" }}>
@@ -141,7 +144,7 @@ const Projects = () => {
                   </Button>
                 </Box>
               </Box>
-            </Slide>
+            </Slide> */}
           </Box>
           <Box
             width="50%"
@@ -155,16 +158,37 @@ const Projects = () => {
                 margin: "10px 0",
                 fontSize: "25px",
                 fontWeight: "500",
-                color: "black",
+                color: "white",
                 textAlign: "center",
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                gap: "2px",
               }}
             >
+              <IconButton
+                href="https://github.com/Pranavcm-07/socialmedia-website-frontend.git"
+                target="_blank"
+              >
+                <CodeIcon
+                  sx={{ color: "white", "&:hover": { color: "#ffc107" } }}
+                />
+              </IconButton>
               CONNECTIFY
+              <IconButton
+                href="https://connectify-socialmedia.vercel.app"
+                target="_blank"
+              >
+                <LinkIcon
+                  sx={{ color: "white", "&:hover": { color: "#ffc107" } }}
+                />
+              </IconButton>
             </Typography>
             <Typography
               sx={{
                 fontSize: "20px",
                 padding: "10px",
+                color: "#aaa",
               }}
             >
               Connectify, a dynamic MERN stack social media website that brings
@@ -185,11 +209,11 @@ const Projects = () => {
                 <Typography
                   key={index}
                   sx={{
-                    padding: "1px 10px",
-                    color: "black",
+                    padding: "2px 10px",
+                    color: "white",
                     fontWeight: "500",
                     borderRadius: "20px",
-                    backgroundColor: "#e9e9e9",
+                    border: "1px solid #ffc107",
                   }}
                 >
                   {item}

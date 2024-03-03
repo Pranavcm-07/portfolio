@@ -16,11 +16,12 @@ const Navbar = () => {
     <Box
       sx={{
         width: "100%",
-        padding: "15px 20px",
-        backgroundColor: "rgba(255,255,255)",
+        padding: "25px 20px",
+        backgroundColor: "rgba(0,0,0)",
+        color: "white",
         zIndex: "9999",
         position: "fixed",
-        borderBottom: "1px solid #eee",
+        borderBottom: "1px solid rgba(255,255,255,0.2)",
       }}
     >
       <Box
@@ -52,7 +53,7 @@ const Navbar = () => {
         <FlexBetween
           sx={{
             gap: "30px",
-            color: "black",
+            color: "white",
           }}
         >
           <CustomTypography item={"About"} />
@@ -77,7 +78,7 @@ const Navbar = () => {
             rel="noopener"
           >
             <IconButton>
-              <LinkedInIcon sx={{ fontSize: "20px", color: "black" }} />
+              <LinkedInIcon sx={{ fontSize: "20px", color: "white" }} />
             </IconButton>
           </Link>
           <Link
@@ -86,7 +87,7 @@ const Navbar = () => {
             rel="noopener"
           >
             <IconButton>
-              <TwitterIcon sx={{ fontSize: "20px", color: "black" }} />
+              <TwitterIcon sx={{ fontSize: "20px", color: "white" }} />
             </IconButton>
           </Link>
           <Link
@@ -95,7 +96,7 @@ const Navbar = () => {
             rel="noopener"
           >
             <IconButton>
-              <InstagramIcon sx={{ fontSize: "20px", color: "black" }} />
+              <InstagramIcon sx={{ fontSize: "20px", color: "white" }} />
             </IconButton>
           </Link>
           <Link
@@ -104,7 +105,7 @@ const Navbar = () => {
             rel="noopener"
           >
             <IconButton>
-              <GitHubIcon sx={{ fontSize: "20px", color: "black" }} />
+              <GitHubIcon sx={{ fontSize: "20px", color: "white" }} />
             </IconButton>
           </Link>
         </Box>

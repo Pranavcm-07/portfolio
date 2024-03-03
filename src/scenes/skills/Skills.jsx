@@ -9,7 +9,7 @@ const Skills = () => {
         width: "75%",
         margin: "auto",
         borderRadius: "50px",
-        backgroundColor: "white",
+        backgroundColor: "black",
         // border: "1px solid #ccc",
         padding: "50px",
       }}
@@ -18,7 +18,7 @@ const Skills = () => {
         sx={{
           fontSize: "40px",
           fontWeight: "700",
-          color: "black",
+          color: "white",
           textAlign: "center",
           mb: "10px",
         }}
@@ -52,10 +52,12 @@ const Skills = () => {
               padding: "10px 20px",
               borderLeft: "5px solid #ffc107",
               borderRadius: "30px",
-              boxShadow: "1px 1px 10px #aaa",
+              boxShadow: "1px 1px 10px #5d5d5d",
             }}
           >
-            <Typography sx={{ fontSize: "18px", fontWeight: "500" }}>
+            <Typography
+              sx={{ fontSize: "18px", fontWeight: "500", color: "white" }}
+            >
               {skill}
             </Typography>
           </Box>
