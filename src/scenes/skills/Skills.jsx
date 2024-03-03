@@ -31,9 +31,36 @@ const Skills = () => {
           height: "5px",
           borderRadius: "50px",
           backgroundColor: "#ffc107",
-          margin: "auto",
+          margin: "0 auto 50px",
         }}
       />
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexWrap: "wrap",
+          gap: "20px",
+          width: "80%",
+          margin: "auto",
+        }}
+      >
+        {skills.map((skill, index) => (
+          <Box
+            key={index}
+            sx={{
+              padding: "10px 20px",
+              borderLeft: "5px solid #ffc107",
+              borderRadius: "30px",
+              boxShadow: "1px 1px 10px #aaa",
+            }}
+          >
+            <Typography sx={{ fontSize: "18px", fontWeight: "500" }}>
+              {skill}
+            </Typography>
+          </Box>
+        ))}
+      </Box>
     </Box>
   );
 };

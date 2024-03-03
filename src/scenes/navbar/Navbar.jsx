@@ -6,6 +6,12 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 const Navbar = () => {
+  const handleClick = () => {
+    const section = document.getElementById(`Home`);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <Box
       sx={{
@@ -28,6 +34,7 @@ const Navbar = () => {
         }}
       >
         <Typography
+          onClick={handleClick}
           sx={{
             fontSize: "25px",
             fontWeight: "700",
@@ -37,6 +44,7 @@ const Navbar = () => {
             transition: "0.1s",
             position: "absolute",
             left: "0",
+            cursor: "pointer",
           }}
         >
           Pranav.dev
@@ -47,7 +55,6 @@ const Navbar = () => {
             color: "black",
           }}
         >
-          <CustomTypography item={"Home"} />
           <CustomTypography item={"About"} />
           <CustomTypography item={"Skills"} />
           <CustomTypography item={"Projects"} />
