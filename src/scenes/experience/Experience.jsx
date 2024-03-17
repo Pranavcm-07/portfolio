@@ -1,11 +1,16 @@
 import { Box, Typography } from "@mui/material";
 import data from "../../../data/data.json";
+import { motion } from "framer-motion";
 
 const Experience = () => {
   const { experience } = data;
   return (
     <Box sx={{ margin: "auto", width: "70%", padding: "30px" }}>
       <Typography
+        component={motion.p}
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 20 }}
+        transition={{ duration: 0.5 }}
         sx={{
           fontSize: "40px",
           fontWeight: "700",
@@ -44,11 +49,16 @@ const Experience = () => {
             }}
           >
             <Box
+              component={motion.div}
+              initial={{ x: index % 2 == 0 ? -200 : 200, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.4 }}
+              viewport={{ once: true }}
               sx={{
                 padding: "15px",
                 borderRadius: "15px",
                 border: "1px solid #aaa",
-                width: "50%",
+                width: "48%",
                 marginLeft: index % 2 == 1 && "50%",
                 borderLeft: index % 2 == 0 && "7px solid #ffc107",
                 borderRight: index % 2 == 1 && "7px solid #ffc107",

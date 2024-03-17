@@ -1,5 +1,6 @@
 import { Box, Button, CardMedia, Typography } from "@mui/material";
 import DescriptionIcon from "@mui/icons-material/Description";
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (
@@ -10,8 +11,12 @@ const Home = () => {
         display: "flex",
       }}
     >
-      <Box sx={{ width: "60%" }}>
+      <Box sx={{ width: "60%", margin: "auto" }}>
         <Typography
+          component={motion.p}
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
           sx={{
             color: "#5b5b5b",
             fontSize: "14px",
@@ -25,6 +30,10 @@ const Home = () => {
         </Typography>
         <Box>
           <Typography
+            component={motion.p}
+            initial={{ opacity: 0, scale: 0.7 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7 }}
             sx={{
               fontSize: "2.8em",
               fontWeight: "700",
@@ -36,6 +45,10 @@ const Home = () => {
           {/* <Typography></Typography> */}
         </Box>
         <Typography
+          component={motion.p}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
           sx={{
             margin: "10px 0",
             color: "#5b5b5b;",
@@ -55,6 +68,10 @@ const Home = () => {
           }}
         >
           <Button
+            component={motion.button}
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
             sx={{
               padding: "13px 29px",
               display: "flex",
@@ -88,6 +105,10 @@ const Home = () => {
             </Typography>
           </Button>
           <Button
+            component={motion.button}
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             href="https://github.com/Pranavcm-07"
             target="_blank"
             sx={{
@@ -121,31 +142,21 @@ const Home = () => {
         </Box>
       </Box>
       <Box sx={{ width: "40%", padding: "15px" }}>
-        <Box
-          sx={{
-            position: "relative",
-            borderRadius: "60% 40% 34% 66% / 55% 69% 31% 45% ",
-            width: "100%",
-            height: "100%",
-            backgroundColor: "#ffc107",
-          }}
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
         >
           <CardMedia
             component="img"
-            image="../public/see-profile-gentlema-11563886739l6i9igwwuz-removebg-preview.png"
+            image="../public/blob.svg"
             sx={{
-              position: "absolute",
-              width: "400px",
-              left: "10px",
-              top: "-155px",
-              // zIndex: "999",
-              // mixBlendMode: "screen",
-              // objectFit: "cover",
-              borderRadius: "20px",
+              width: "80%",
+              margin: "auto",
             }}
             alt="Paella dish"
           />
-        </Box>
+        </motion.div>
       </Box>
     </Box>
   );

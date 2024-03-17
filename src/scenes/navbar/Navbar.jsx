@@ -5,6 +5,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import { motion } from "framer-motion";
 const Navbar = () => {
   const handleClick = () => {
     const section = document.getElementById(`Home`);
@@ -14,6 +15,10 @@ const Navbar = () => {
   };
   return (
     <Box
+      component={motion.nav}
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.7 }}
       sx={{
         width: "100%",
         padding: "25px 20px",

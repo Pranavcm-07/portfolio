@@ -1,10 +1,15 @@
 import { Box, Button, Typography } from "@mui/material";
 import CustomTextField from "../../components/CustomTextField";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
     <Box sx={{ margin: "auto", width: "70%", padding: "20px" }}>
       <Typography
+        component={motion.p}
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 20 }}
+        transition={{ duration: 0.5 }}
         sx={{
           fontSize: "40px",
           fontWeight: "700",

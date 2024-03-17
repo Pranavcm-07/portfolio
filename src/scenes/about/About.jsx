@@ -1,4 +1,5 @@
 import { Box, Typography, CardMedia, Button } from "@mui/material";
+import { motion } from "framer-motion";
 
 const About = () => {
   const handleClick = () => {
@@ -10,6 +11,11 @@ const About = () => {
   return (
     <Box sx={{ width: "90%", height: "auto", margin: "auto" }}>
       <Typography
+        component={motion.p}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
         sx={{
           fontSize: "40px",
           fontWeight: "700",
@@ -40,6 +46,11 @@ const About = () => {
         }}
       >
         <Box
+          component={motion.div}
+          whileInView={{ opacity: [0, 0.5, 1], x: [-40, -20, 0] }}
+          initial={{ opacity: 0, x: -60 }}
+          transition={{ duration: 0.4 }}
+          viewport={{ once: true }}
           sx={{
             margin: "auto",
           }}
@@ -69,7 +80,14 @@ const About = () => {
               color: "white",
             }}
           >
-            <Typography sx={{ fontWeight: "400" }}>
+            <Typography
+              component={motion.p}
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 40 }}
+              transition={{ duration: 0.4 }}
+              viewport={{ once: true }}
+              sx={{ fontWeight: "400" }}
+            >
               Hey there, I'm Pranav, a dynamic full-stack developer driven by a
               burning passion for crafting innovative solutions. Currently
               pursuing a bachelor's degree in Electrical and Electronics
@@ -78,12 +96,24 @@ const About = () => {
               excellence.
             </Typography>
             <br />
-            <Typography sx={{ fontWeight: "400" }}>
+            <Typography
+              component={motion.p}
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4 }}
+              sx={{ fontWeight: "400" }}
+            >
               Beyond coding, I find joy in watching movies, playing football and
               cricket. Additionally, I'm an avid Rubik's Cube enthusiast.
             </Typography>
           </Box>
           <Button
+            component={motion.button}
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 60 }}
+            transition={{ duration: 0.4 }}
+            viewport={{ once: true }}
             onClick={handleClick}
             sx={{
               padding: "10px 20px",

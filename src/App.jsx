@@ -16,6 +16,8 @@ function App() {
         style={{
           padding: "250px 0 210px 0",
           backgroundColor: "black",
+          position: "relative",
+          overflow: "hidden",
         }}
       >
         <Home />
@@ -25,8 +27,32 @@ function App() {
         style={{
           padding: "70px 0 20px",
           backgroundColor: "black",
+          position: "relative",
+          overflow: "hidden",
         }}
       >
+        <div
+          style={{
+            position: "absolute",
+            width: "200px",
+            height: "150px",
+            border: "5px solid #ffc107",
+            borderRadius: "20px",
+            right: "-140px",
+            top: "100px",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            width: "80px",
+            height: "150px",
+            backgroundColor: "#ffc107",
+            borderRadius: "20px",
+            left: "-50px",
+            bottom: "40%",
+          }}
+        />
         <About />
       </section>
       <section
@@ -34,6 +60,8 @@ function App() {
         style={{
           padding: "80px 0",
           backgroundColor: "black",
+          position: "relative",
+          overflow: "hidden",
         }}
       >
         <Skills />
@@ -43,6 +71,8 @@ function App() {
         style={{
           padding: "80px 0",
           backgroundColor: "black",
+          position: "relative",
+          overflow: "hidden",
         }}
       >
         <Projects />

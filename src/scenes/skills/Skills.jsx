@@ -1,8 +1,37 @@
-import { Box, Typography, Icon } from "@mui/material";
-import data from "../../../data/data.json";
+import { Box, Typography } from "@mui/material";
+import {
+  CPPIcon,
+  HTMLIcon,
+  JavascriptIcon,
+  MaterialUIIcon,
+  MongoDBIcon,
+  MysqlIcon,
+  VerselIcon,
+  NodeJSIcon,
+  ReactJSIcon,
+  ReduxJSIcon,
+  BootstrapIcon,
+  GitIcon,
+  PostmanIcon,
+  PythonIcon,
+  ExpressJSIcon,
+  CSSIcon,
+} from "../../../public/icons/icons";
+import { motion } from "framer-motion";
+import ScrollBox from "../../components/Style";
+
+import { useEffect } from "react";
 
 const Skills = () => {
-  const { skills } = data;
+  useEffect(() => {
+    const scrollers = document.querySelectorAll(".scroller");
+    scrollers.forEach((scroller) => {
+      const scrollerInner = scroller.querySelector(".scroller_inner");
+      const copy = scrollerInner.cloneNode(true);
+      scroller.appendChild(copy);
+    });
+  }, []);
+
   return (
     <Box
       sx={{
@@ -10,11 +39,14 @@ const Skills = () => {
         margin: "auto",
         borderRadius: "50px",
         backgroundColor: "black",
-        // border: "1px solid #ccc",
         padding: "50px",
       }}
     >
       <Typography
+        component={motion.p}
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 20 }}
+        transition={{ duration: 0.5 }}
         sx={{
           fontSize: "40px",
           fontWeight: "700",
@@ -35,33 +67,55 @@ const Skills = () => {
         }}
       />
       <Box
+        className="scroller"
         sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          flexWrap: "wrap",
-          gap: "20px",
-          width: "80%",
+          overflow: "hidden",
+          position: "relative",
+          width: "90%",
+          WebkitMaskImage:
+            "linear-gradient(90deg,transparent,#fff 20%,#fff 80%,transparent)",
+          whiteSpace: "nowrap",
           margin: "auto",
         }}
       >
-        {skills.map((skill, index) => (
-          <Box
-            key={index}
-            sx={{
-              padding: "10px 20px",
-              borderLeft: "5px solid #ffc107",
-              borderRadius: "30px",
-              boxShadow: "1px 1px 10px #5d5d5d",
-            }}
-          >
-            <Typography
-              sx={{ fontSize: "18px", fontWeight: "500", color: "white" }}
-            >
-              {skill}
-            </Typography>
-          </Box>
-        ))}
+        <ScrollBox className="scroller_inner">
+          <HTMLIcon />
+          <CSSIcon />
+          <JavascriptIcon />
+          <ReactJSIcon />
+          <NodeJSIcon />
+          <ExpressJSIcon />
+          <MongoDBIcon />
+          <MysqlIcon />
+        </ScrollBox>
+      </Box>
+      <Box
+        className="scroller"
+        sx={{
+          overflow: "hidden",
+          width: "90%",
+          position: "relative",
+          WebkitMaskImage:
+            "linear-gradient(90deg,transparent,#fff 20%,#fff 80%,transparent)",
+          whiteSpace: "nowrap",
+          margin: "auto",
+        }}
+      >
+        <ScrollBox
+          className="scroller_inner"
+          sx={{
+            animationDirection: "reverse",
+          }}
+        >
+          <GitIcon />
+          <CPPIcon />
+          <PythonIcon />
+          <BootstrapIcon />
+          <MaterialUIIcon />
+          <VerselIcon />
+          <ReduxJSIcon />
+          <PostmanIcon />
+        </ScrollBox>
       </Box>
     </Box>
   );
