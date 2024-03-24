@@ -17,6 +17,12 @@ const CustomTextField = styled(TextField)({
   "& .MuiInputLabel-root": {
     color: "#aaa",
   },
+  "& .css-1h58xvr-MuiInputBase-root-MuiOutlinedInput-root": {
+    color: "white",
+  },
+  "& .css-wae6gh-MuiInputBase-root-MuiOutlinedInput-root": {
+    color: "white",
+  },
 });
 
 export default CustomTextField;

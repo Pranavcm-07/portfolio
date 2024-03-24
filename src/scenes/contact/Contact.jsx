@@ -1,8 +1,56 @@
 import { Box, Button, Typography } from "@mui/material";
 import CustomTextField from "../../components/CustomTextField";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react";
 
 const Contact = () => {
+  const form = useRef();
+  const [info, setInfo] = useState({
+    fullname: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setInfo((pre) => ({
+      ...pre,
+      [name]: value,
+    }));
+  };
+  const sendEmail = async (e) => {
+    e.preventDefault();
+    setInfo({
+      fullname: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+    const data = {
+      service_id: import.meta.env.VITE_REACT_APP_YOUR_SERVICE_ID,
+      template_id: import.meta.env.VITE_REACT_APP_YOUR_TEMPLATE_ID,
+      user_id: import.meta.env.VITE_REACT_APP_YOUR_PUBLIC_KEY,
+      template_params: {
+        fullname: info.fullname,
+        email: info.email,
+        message: info.message,
+        subject: info.subject,
+      },
+    };
+    const response = await fetch(
+      "https://api.emailjs.com/api/v1.0/email/send",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }
+    );
+    const res = await response.json();
+    console.log(res);
+  };
   return (
     <Box sx={{ margin: "auto", width: "70%", padding: "20px" }}>
       <Typography
@@ -43,6 +91,7 @@ const Contact = () => {
       </Typography>
       <Box
         component="form"
+        ref={form}
         sx={{
           display: "grid",
           gap: "30px",
@@ -57,24 +106,33 @@ const Contact = () => {
         <CustomTextField
           label="Full Name"
           name="fullname"
+          value={info.fullname}
+          onChange={handleChange}
           sx={{
             borderRadius: "30px",
             "&:focus": {
               color: "#ffc107",
             },
+            color: "white",
           }}
         />
         <CustomTextField
+          value={info.email}
+          onChange={handleChange}
           label="Email"
           name="email"
           sx={{ borderRadius: "30px" }}
         />
         <CustomTextField
+          value={info.subject}
+          onChange={handleChange}
           label="Subjext"
           name="subject"
           sx={{ borderRadius: "30px" }}
         />
         <CustomTextField
+          value={info.message}
+          onChange={handleChange}
           variant="outlined"
           label="Message"
           name="message"
@@ -95,6 +153,7 @@ const Contact = () => {
               color: "white",
             },
           }}
+          onClick={sendEmail}
         >
           Send Message
         </Button>

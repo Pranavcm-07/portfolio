@@ -7,6 +7,7 @@ import Projects from "./scenes/projects/Projects";
 import Footer from "./scenes/footer/Footer";
 import Contact from "./scenes/contact/Contact";
 import Experience from "./scenes/experience/Experience";
+
 function App() {
   return (
     <div className="app">
@@ -80,7 +81,7 @@ function App() {
       <section
         id="Experience"
         style={{
-          padding: "80px 0 130px",
+          padding: "50px 0 50px",
           backgroundColor: "black",
         }}
       >

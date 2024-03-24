@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 const Experience = () => {
   const { experience } = data;
+
   return (
     <Box sx={{ margin: "auto", width: "70%", padding: "30px" }}>
       <Typography

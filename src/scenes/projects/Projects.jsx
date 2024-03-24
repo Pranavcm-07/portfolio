@@ -36,8 +36,6 @@ const Projects = () => {
         }}
       />
       <Project />
-      <Project />
-      <Project />
     </Box>
   );
 };
