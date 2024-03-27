@@ -7,11 +7,13 @@ import Projects from "./scenes/projects/Projects";
 import Footer from "./scenes/footer/Footer";
 import Contact from "./scenes/contact/Contact";
 import Experience from "./scenes/experience/Experience";
+import ParticlesBackground from "./components/ParticlesBackground";
 
 function App() {
   return (
     <div className="app">
       <Navbar />
+
       <section
         id="Home"
         style={{
@@ -22,6 +24,7 @@ function App() {
         }}
       >
         <Home />
+        <ParticlesBackground />
       </section>
       <section
         id="About"
@@ -83,6 +86,7 @@ function App() {
         style={{
           padding: "50px 0 50px",
           backgroundColor: "black",
+          position: "relative",
         }}
       >
         <Experience />
@@ -92,6 +96,7 @@ function App() {
         style={{
           padding: "80px 0",
           backgroundColor: "black",
+          position: "relative",
         }}
       >
         <Contact />
@@ -102,6 +107,7 @@ function App() {
           padding: "20px 0 10px",
           backgroundColor: "black",
           color: "white",
+          position: "relative",
         }}
       >
         <Footer />

@@ -12,14 +12,10 @@ a{
 li{
   list-style: none;
 }
-/* .app{
-  width: 65%;
-  margin: auto;
-} */
+
 html{
   scroll-behavior: smooth;
 }
-/* body{
+.app{
   background-color: black;
-  color:'white'
-} */
+}

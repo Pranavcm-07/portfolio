@@ -149,7 +149,7 @@ const Home = () => {
         >
           <CardMedia
             component="img"
-            image="../public/blob.svg"
+            image="../public/profile-avatar.svg"
             sx={{
               width: "80%",
               margin: "auto",
