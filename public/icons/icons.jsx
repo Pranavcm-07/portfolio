@@ -3,7 +3,7 @@ import { createSvgIcon } from "@mui/material";
 export const HTMLIcon = createSvgIcon(
   <svg
     viewBox="0 0 128 128"
-    style={{ width: "80px", height: "80px", margin: "0 15px" }}
+    style={{ width: "65px", height: "65px", margin: "0 15px" }}
   >
     <path
       fill="#E44D26"
@@ -23,7 +23,7 @@ export const HTMLIcon = createSvgIcon(
 export const CSSIcon = createSvgIcon(
   <svg
     viewBox="0 0 128 128"
-    style={{ width: "80px", height: "80px", margin: "0 15px" }}
+    style={{ width: "65px", height: "65px", margin: "0 15px" }}
   >
     <path
       fill="#1572B6"
@@ -54,7 +54,7 @@ export const CSSIcon = createSvgIcon(
 export const JavascriptIcon = createSvgIcon(
   <svg
     viewBox="0 0 128 128"
-    style={{ width: "80px", height: "80px", margin: "0 15px" }}
+    style={{ width: "65px", height: "65px", margin: "0 15px" }}
   >
     <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z"></path>
     <path
@@ -66,7 +66,7 @@ export const JavascriptIcon = createSvgIcon(
 export const BootstrapIcon = createSvgIcon(
   <svg
     viewBox="0 0 128 128"
-    style={{ width: "80px", height: "80px", margin: "0 15px" }}
+    style={{ width: "65px", height: "65px", margin: "0 15px" }}
   >
     <path
       fill="#6610f2"
@@ -84,7 +84,7 @@ export const BootstrapIcon = createSvgIcon(
 export const ExpressJSIcon = createSvgIcon(
   <svg
     viewBox="0 0 128 128"
-    style={{ width: "80px", height: "80px", margin: "0 15px" }}
+    style={{ width: "65px", height: "65px", margin: "0 15px" }}
   >
     <path
       fill="white"
@@ -95,7 +95,7 @@ export const ExpressJSIcon = createSvgIcon(
 export const GitIcon = createSvgIcon(
   <svg
     viewBox="0 0 128 128"
-    style={{ width: "80px", height: "80px", margin: "0 15px" }}
+    style={{ width: "65px", height: "65px", margin: "0 15px" }}
   >
     <path
       fill="#F34F29"
@@ -106,7 +106,7 @@ export const GitIcon = createSvgIcon(
 export const MaterialUIIcon = createSvgIcon(
   <svg
     viewBox="0 0 128 128"
-    style={{ width: "80px", height: "80px", margin: "0 15px" }}
+    style={{ width: "65px", height: "65px", margin: "0 15px" }}
   >
     <path
       fill="#1FA6CA"
@@ -126,7 +126,7 @@ export const MaterialUIIcon = createSvgIcon(
 export const MongoDBIcon = createSvgIcon(
   <svg
     viewBox="0 0 128 128"
-    style={{ width: "80px", height: "80px", margin: "0 15px" }}
+    style={{ width: "65px", height: "65px", margin: "0 15px" }}
   >
     <path
       fillRule="evenodd"
@@ -229,7 +229,7 @@ export const MongoDBIcon = createSvgIcon(
 export const MysqlIcon = createSvgIcon(
   <svg
     viewBox="0 0 128 128"
-    style={{ width: "80px", height: "80px", margin: "0 15px" }}
+    style={{ width: "65px", height: "65px", margin: "0 15px" }}
   >
     <path
       fill="#00618A"
@@ -240,7 +240,7 @@ export const MysqlIcon = createSvgIcon(
 export const NodeJSIcon = createSvgIcon(
   <svg
     viewBox="0 0 128 128"
-    style={{ width: "80px", height: "80px", margin: "0 15px" }}
+    style={{ width: "65px", height: "65px", margin: "0 15px" }}
   >
     <path
       fill="#5fa04e"
@@ -312,7 +312,7 @@ export const NodeJSIcon = createSvgIcon(
 export const PostmanIcon = createSvgIcon(
   <svg
     viewBox="0 0 128 128"
-    style={{ width: "80px", height: "80px", margin: "0 15px" }}
+    style={{ width: "65px", height: "65px", margin: "0 15px" }}
   >
     <path
       fill="#f37036"
@@ -331,7 +331,7 @@ export const PostmanIcon = createSvgIcon(
 export const PythonIcon = createSvgIcon(
   <svg
     viewBox="0 0 128 128"
-    style={{ width: "80px", height: "80px", margin: "0 15px" }}
+    style={{ width: "65px", height: "65px", margin: "0 15px" }}
   >
     <linearGradient
       id="python-original-a"
@@ -388,7 +388,7 @@ export const PythonIcon = createSvgIcon(
 export const ReactJSIcon = createSvgIcon(
   <svg
     viewBox="0 0 128 128"
-    style={{ width: "80px", height: "80px", margin: "0 15px" }}
+    style={{ width: "65px", height: "65px", margin: "0 15px" }}
   >
     <g fill="#61DAFB">
       <circle cx="64" cy="64" r="11.4"></circle>
@@ -399,7 +399,7 @@ export const ReactJSIcon = createSvgIcon(
 export const ReduxJSIcon = createSvgIcon(
   <svg
     viewBox="0 0 128 128"
-    style={{ width: "80px", height: "80px", margin: "0 15px" }}
+    style={{ width: "65px", height: "65px", margin: "0 15px" }}
   >
     <path
       fill="#764abc"
@@ -421,7 +421,7 @@ export const VerselIcon = createSvgIcon(
 export const CPPIcon = createSvgIcon(
   <svg
     viewBox="0 0 128 128"
-    style={{ width: "80px", height: "80px", margin: "0 15px" }}
+    style={{ width: "65px", height: "65px", margin: "0 15px" }}
   >
     <path
       fill="#00599c"

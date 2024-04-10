@@ -1,17 +1,32 @@
-import { Box, Button, CardMedia, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  CardMedia,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import DescriptionIcon from "@mui/icons-material/Description";
 import { motion } from "framer-motion";
 
 const Home = () => {
+  const isSmallMobile = useMediaQuery("(max-width:430px)");
+  const isMobile = useMediaQuery("(max-width:750px)");
   return (
     <Box
       sx={{
-        width: "70%",
+        maxWidth: isMobile ? "450px" : "900px",
         margin: "auto",
         display: "flex",
+        flexDirection: isMobile && "column-reverse",
+        padding: isSmallMobile ? "40px" : "20px",
       }}
     >
-      <Box sx={{ width: "60%", margin: "auto" }}>
+      <Box
+        sx={{
+          width: isMobile ? "100%" : "60%",
+          margin: "auto",
+        }}
+      >
         <Typography
           component={motion.p}
           initial={{ opacity: 0, y: -20 }}
@@ -62,7 +77,7 @@ const Home = () => {
         <Box
           sx={{
             margin: "25px 0",
-            display: "flex",
+            display: isSmallMobile ? "block" : "flex",
             alignItems: "center",
             gap: "20px",
           }}
@@ -126,6 +141,7 @@ const Home = () => {
                   color: "white",
                 },
               },
+              mt: isSmallMobile && "20px",
             }}
           >
             <Typography
@@ -141,17 +157,27 @@ const Home = () => {
           </Button>
         </Box>
       </Box>
-      <Box sx={{ width: "40%", padding: "15px" }}>
+      <Box
+        sx={{
+          width: isMobile ? "100%" : "40%",
+          padding: "15px",
+          margin: isMobile && "auto",
+        }}
+      >
         <motion.div
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{
+            opacity: 0,
+            x: isMobile ? 0 : 100,
+            y: isMobile ? -100 : 0,
+          }}
+          animate={{ opacity: 1, x: 0, y: 0 }}
           transition={{ duration: 0.7 }}
         >
           <CardMedia
             component="img"
             image="../public/profile-avatar.svg"
             sx={{
-              width: "80%",
+              width: isMobile ? "60%" : "80%",
               margin: "auto",
             }}
             alt="Paella dish"

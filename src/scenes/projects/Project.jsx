@@ -1,4 +1,10 @@
-import { Box, CardMedia, IconButton, Typography } from "@mui/material";
+import {
+  Box,
+  CardMedia,
+  IconButton,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import LinkIcon from "@mui/icons-material/Link";
 import CodeIcon from "@mui/icons-material/Code";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -14,6 +20,10 @@ const Project = () => {
     "MongoDB",
     "NodeJS",
   ];
+  const isTablet = useMediaQuery("(max-width:1000px)");
+  const isSmallMobile = useMediaQuery("(max-width:400px)");
+  const isBigMobile = useMediaQuery("(max-width:800px)");
+
   const scrollRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: scrollRef,
@@ -25,19 +35,25 @@ const Project = () => {
     <Box
       component={motion.div}
       ref={scrollRef}
-      style={{ opacity: opacityProgress, scale: scaleProgress }}
+      style={{
+        opacity: opacityProgress,
+        scale: scaleProgress,
+        // position: "relative",
+      }}
       sx={{
-        width: "80%",
+        maxWidth: isTablet ? "100%" : "810px",
         margin: "30px auto",
         "&:hover": {
           transition: "0.25s",
           scale: "1.02",
         },
+        position: "relative",
+        minHeight: "max-content",
       }}
     >
       <Box
         sx={{
-          display: "flex",
+          display: isBigMobile ? "block" : "flex",
           justifyContent: "center",
           alignItems: "center",
           borderRadius: "10px",
@@ -45,36 +61,38 @@ const Project = () => {
           borderLeft: "5px solid #ffc107",
         }}
       >
-        <Box
-          width="50%"
-          height="300px"
-          sx={{
-            overflow: "hidden",
-            borderRadius: "10px",
-            position: "relative",
-          }}
-        >
-          <CardMedia
-            component="img"
-            src="../public/so.png"
+        {isSmallMobile ? null : (
+          <Box
+            width={isBigMobile ? "100%" : "50%"}
+            height="300px"
             sx={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
+              overflow: "hidden",
+              borderRadius: "10px",
+              position: "relative",
             }}
-          />
-        </Box>
+          >
+            <CardMedia
+              component="img"
+              src="../public/so.png"
+              sx={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
+          </Box>
+        )}
         <Box
-          width="50%"
-          height="300px"
+          width={isBigMobile ? "100%" : "50%"}
+          minHeight="300px"
           sx={{
-            padding: "0 20px",
+            padding: isBigMobile ? "20px" : "0 20px",
           }}
         >
           <Typography
             sx={{
               margin: "10px 0",
-              fontSize: "25px",
+              fontSize: isTablet ? "20px" : "25px",
               fontWeight: "500",
               color: "white",
               textAlign: "center",
@@ -104,7 +122,7 @@ const Project = () => {
           </Typography>
           <Typography
             sx={{
-              fontSize: "20px",
+              fontSize: isTablet ? "17px" : "20px",
               padding: "10px",
               color: "#aaa",
             }}
@@ -121,6 +139,7 @@ const Project = () => {
               gap: "15px",
               width: "100%",
               flexWrap: "wrap",
+              mb: "10px",
             }}
           >
             {st.map((item, index) => (
@@ -132,6 +151,7 @@ const Project = () => {
                   fontWeight: "500",
                   borderRadius: "20px",
                   border: "1px solid #ffc107",
+                  fontSize: isTablet && "15px",
                 }}
               >
                 {item}

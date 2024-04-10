@@ -1,4 +1,11 @@
-import { Box, Typography, IconButton, Divider, Link } from "@mui/material";
+import {
+  Box,
+  Typography,
+  IconButton,
+  Divider,
+  Link,
+  useMediaQuery,
+} from "@mui/material";
 import FlexBetween from "../../components/FlexBetween";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -6,25 +13,38 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 const Footer = () => {
   const date = new Date().getFullYear();
+  const isMobile = useMediaQuery("(max-width:650px)");
+  const isTablet = useMediaQuery("(max-width:1000px)");
   return (
-    <Box sx={{ width: "90%", margin: "auto", padding: "30px" }}>
+    <Box
+      sx={{ width: "90%", margin: "auto", padding: isMobile ? "15px" : "30px" }}
+    >
       <Box>
-        <FlexBetween>
+        <Box
+          sx={{
+            display: isMobile ? "block" : "flex",
+            alignItems: "top",
+            justifyContent: "space-between",
+          }}
+        >
           <Box>
             <Typography
               sx={{
-                fontSize: "20px",
+                fontSize: isMobile ? "17px" : "20px",
                 fontWeight: "700",
+                textAlign: isMobile && "center",
               }}
             >
               PRANAV CM
             </Typography>
             <Typography
               sx={{
-                margin: "15px 0",
-                width: "60%",
+                margin: isMobile ? "15px auto" : "15px 0",
+                width: isTablet ? "90%" : "60%",
                 lineHeight: "2",
                 color: "#aaa",
+                textAlign: isMobile && "center",
+                fontSize: isMobile && "15px",
               }}
             >
               A dynamic full-stack developer driven by a burning passion for
@@ -35,7 +55,7 @@ const Footer = () => {
           <Box>
             <Typography
               sx={{
-                fontSize: "20px",
+                fontSize: isMobile ? "17px" : "20px",
                 fontWeight: "700",
                 textAlign: "center",
                 mb: "10px",
@@ -121,7 +141,7 @@ const Footer = () => {
               </Link>
             </Box>
           </Box>
-        </FlexBetween>
+        </Box>
       </Box>
       <Divider
         sx={{ backgroundColor: "rgba(255,255,255,0.3)", margin: "20px 0" }}
@@ -132,7 +152,7 @@ const Footer = () => {
           color: "rgba(255,255,255,0.3)",
         }}
       >
-        <Typography
+        <Box
           sx={{
             fontSize: "13px",
             textAlign: "center",
@@ -146,7 +166,7 @@ const Footer = () => {
           <Typography sx={{ fontWeight: "500", fontSize: "13px" }}>
             Pranav CM
           </Typography>
-        </Typography>
+        </Box>
       </Box>
     </Box>
   );

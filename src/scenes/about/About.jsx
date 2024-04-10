@@ -1,4 +1,10 @@
-import { Box, Typography, CardMedia, Button } from "@mui/material";
+import {
+  Box,
+  Typography,
+  CardMedia,
+  Button,
+  useMediaQuery,
+} from "@mui/material";
 import { motion } from "framer-motion";
 
 const About = () => {
@@ -8,6 +14,10 @@ const About = () => {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
+  const isSmallTablet = useMediaQuery("(max-width:900px)");
+  const isSmallMobile = useMediaQuery("(max-width:400px)");
+  const isTablet = useMediaQuery("(max-width:1000px)");
+
   return (
     <Box sx={{ width: "90%", height: "auto", margin: "auto" }}>
       <Typography
@@ -17,7 +27,7 @@ const About = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
         sx={{
-          fontSize: "40px",
+          fontSize: isSmallMobile ? "25px" : "40px",
           fontWeight: "700",
           margin: "10px 0",
           color: "white",
@@ -37,7 +47,7 @@ const About = () => {
       />
       <Box
         sx={{
-          display: "flex",
+          display: isSmallTablet ? "block" : "flex",
           justifyContent: "center",
           alignItems: "center",
           mt: "10px",
@@ -59,17 +69,25 @@ const About = () => {
             component="img"
             image="../public/7712733_3714961.svg"
             sx={{
-              width: "500px",
+              width: isSmallMobile
+                ? "200px"
+                : isSmallTablet
+                ? "300px"
+                : isTablet
+                ? "400px"
+                : "500px",
               borderRadius: "20px",
+              margin: isSmallTablet && "auto",
             }}
             alt="Paella dish"
           />
         </Box>
         <Box
           sx={{
-            width: "50%",
-            padding: "20px",
+            width: isSmallMobile ? "100%" : isSmallTablet ? "90%" : "50%",
+            padding: isSmallMobile ? "5px" : "20px",
             borderRadius: "30px",
+            margin: isSmallTablet && "auto",
           }}
         >
           <Box
@@ -87,6 +105,7 @@ const About = () => {
               transition={{ duration: 0.4 }}
               viewport={{ once: true }}
               sx={{ fontWeight: "400" }}
+              textAlign={isSmallMobile && "center"}
             >
               Hey there, I'm Pranav, a dynamic full-stack developer driven by a
               burning passion for crafting innovative solutions. Currently
@@ -103,6 +122,7 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.4 }}
               sx={{ fontWeight: "400" }}
+              textAlign={isSmallMobile && "center"}
             >
               Beyond coding, I find joy in watching movies, playing football and
               cricket. Additionally, I'm an avid Rubik's Cube enthusiast.
@@ -130,6 +150,8 @@ const About = () => {
                   color: "white",
                 },
               },
+              margin: isSmallMobile && "auto",
+
               mt: "50px",
             }}
           >

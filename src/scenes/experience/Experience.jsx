@@ -1,19 +1,24 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 import data from "../../../data/data.json";
 import { motion } from "framer-motion";
 
 const Experience = () => {
   const { experience } = data;
+  const isMobile = useMediaQuery("(max-width:650px)");
+  const isSmallMobile = useMediaQuery("(max-width:400px)");
+  const isTablet = useMediaQuery("(max-width:1000px)");
 
   return (
-    <Box sx={{ margin: "auto", width: "70%", padding: "30px" }}>
+    <Box
+      sx={{ margin: "auto", width: isTablet ? "90%" : "70%", padding: "30px" }}
+    >
       <Typography
         component={motion.p}
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 20 }}
         transition={{ duration: 0.5 }}
         sx={{
-          fontSize: "40px",
+          fontSize: isSmallMobile ? "25px" : "39px",
           fontWeight: "700",
           color: "white",
           textAlign: "center",
@@ -33,7 +38,7 @@ const Experience = () => {
       />
       <Box
         sx={{
-          padding: "20px",
+          padding: isSmallMobile ? "20px 0" : "20px",
           mt: "50px",
           display: "flex",
           justifyContent: "center",
@@ -51,7 +56,7 @@ const Experience = () => {
           >
             <Box
               component={motion.div}
-              initial={{ x: index % 2 == 0 ? -200 : 200, opacity: 0 }}
+              initial={{ x: index % 2 == 0 ? -45 : 45, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.4 }}
               viewport={{ once: true }}
@@ -59,8 +64,8 @@ const Experience = () => {
                 padding: "15px",
                 borderRadius: "15px",
                 border: "1px solid #aaa",
-                width: "48%",
-                marginLeft: index % 2 == 1 && "50%",
+                width: isMobile ? "100%" : "48%",
+                marginLeft: isMobile ? "0" : index % 2 == 1 && "50%",
                 borderLeft: index % 2 == 0 && "7px solid #ffc107",
                 borderRight: index % 2 == 1 && "7px solid #ffc107",
                 color: "white",
@@ -68,7 +73,7 @@ const Experience = () => {
             >
               <Typography
                 sx={{
-                  fontSize: "23px",
+                  fontSize: isSmallMobile ? "18px" : "23px",
                   fontWeight: "500",
                   mb: "5px",
                 }}
@@ -82,7 +87,7 @@ const Experience = () => {
               </Typography>
               <Typography
                 sx={{
-                  fontSize: "17px",
+                  fontSize: isSmallMobile ? "15px" : "17px",
                   fontWeight: "300",
                   color: "#aaa",
                 }}

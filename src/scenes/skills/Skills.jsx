@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 import {
   CPPIcon,
   HTMLIcon,
@@ -31,15 +31,17 @@ const Skills = () => {
       scroller.appendChild(copy);
     });
   }, []);
-
+  const isMobile = useMediaQuery("(max-width:750px)");
+  const isTablet = useMediaQuery("(max-width:1000px)");
+  const isSmallMobile = useMediaQuery("(max-width:400px)");
   return (
     <Box
       sx={{
-        width: "75%",
+        width: isTablet ? "100%" : "1000px",
         margin: "auto",
         borderRadius: "50px",
         backgroundColor: "black",
-        padding: "50px",
+        padding: isMobile ? "50px 20px" : "50px",
       }}
     >
       <Typography
@@ -48,7 +50,7 @@ const Skills = () => {
         initial={{ opacity: 0, y: 20 }}
         transition={{ duration: 0.5 }}
         sx={{
-          fontSize: "40px",
+          fontSize: isSmallMobile ? "25px" : "40px",
           fontWeight: "700",
           color: "white",
           textAlign: "center",
@@ -66,20 +68,17 @@ const Skills = () => {
           margin: "0 auto 50px",
         }}
       />
-      <Box
-        className="scroller"
-        sx={{
-          overflow: "hidden",
-          position: "relative",
-          width: "90%",
-          WebkitMaskImage:
-            "linear-gradient(90deg,transparent,#fff 20%,#fff 80%,transparent)",
-          whiteSpace: "nowrap",
-          margin: "auto",
-        }}
-      >
-        <ScrollBox className="scroller_inner">
-          <HTMLIcon />
+      {isMobile ? (
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "20px",
+            flexWrap: "wrap",
+          }}
+        >
+          <HTMLIcon width="50px" height="50px" />
           <CSSIcon />
           <JavascriptIcon />
           <ReactJSIcon />
@@ -87,26 +86,6 @@ const Skills = () => {
           <ExpressJSIcon />
           <MongoDBIcon />
           <MysqlIcon />
-        </ScrollBox>
-      </Box>
-      <Box
-        className="scroller"
-        sx={{
-          overflow: "hidden",
-          width: "90%",
-          position: "relative",
-          WebkitMaskImage:
-            "linear-gradient(90deg,transparent,#fff 20%,#fff 80%,transparent)",
-          whiteSpace: "nowrap",
-          margin: "auto",
-        }}
-      >
-        <ScrollBox
-          className="scroller_inner"
-          sx={{
-            animationDirection: "reverse",
-          }}
-        >
           <GitIcon />
           <CPPIcon />
           <PythonIcon />
@@ -115,8 +94,62 @@ const Skills = () => {
           <VerselIcon />
           <ReduxJSIcon />
           <PostmanIcon />
-        </ScrollBox>
-      </Box>
+        </Box>
+      ) : (
+        <>
+          <Box
+            className="scroller"
+            sx={{
+              overflow: "hidden",
+              position: "relative",
+              width: "90%",
+              WebkitMaskImage:
+                "linear-gradient(90deg,transparent,#fff 20%,#fff 80%,transparent)",
+              whiteSpace: "nowrap",
+              margin: "auto",
+            }}
+          >
+            <ScrollBox className="scroller_inner">
+              <HTMLIcon />
+              <CSSIcon />
+              <JavascriptIcon />
+              <ReactJSIcon />
+              <NodeJSIcon />
+              <ExpressJSIcon />
+              <MongoDBIcon />
+              <MysqlIcon />
+            </ScrollBox>
+          </Box>
+          <Box
+            className="scroller"
+            sx={{
+              overflow: "hidden",
+              width: "90%",
+              position: "relative",
+              WebkitMaskImage:
+                "linear-gradient(90deg,transparent,#fff 20%,#fff 80%,transparent)",
+              whiteSpace: "nowrap",
+              margin: "auto",
+            }}
+          >
+            <ScrollBox
+              className="scroller_inner"
+              sx={{
+                animationDirection: "reverse",
+              }}
+            >
+              <GitIcon />
+              <CPPIcon />
+              <PythonIcon />
+              <BootstrapIcon />
+              <MaterialUIIcon />
+              <VerselIcon />
+              <ReduxJSIcon />
+              <PostmanIcon />
+            </ScrollBox>
+          </Box>
+        </>
+      )}
     </Box>
   );
 };

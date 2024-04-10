@@ -1,7 +1,6 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Typography, useMediaQuery } from "@mui/material";
 import CustomTextField from "../../components/CustomTextField";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 
 const Contact = () => {
@@ -12,6 +11,13 @@ const Contact = () => {
     subject: "",
     message: "",
   });
+  const isFullname = Boolean(info.fullname);
+  const isEmail = Boolean(info.email);
+  const isMessage = Boolean(info.message);
+  const isMobile = useMediaQuery("(max-width:650px)");
+  const isSmallMobile = useMediaQuery("(max-width:400px)");
+  const isTablet = useMediaQuery("(max-width:1000px)");
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setInfo((pre) => ({
@@ -48,18 +54,18 @@ const Contact = () => {
         body: JSON.stringify(data),
       }
     );
-    const res = await response.json();
-    console.log(res);
   };
   return (
-    <Box sx={{ margin: "auto", width: "70%", padding: "20px" }}>
+    <Box
+      sx={{ margin: "auto", width: isMobile ? "100%" : "70%", padding: "20px" }}
+    >
       <Typography
         component={motion.p}
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 20 }}
         transition={{ duration: 0.5 }}
         sx={{
-          fontSize: "40px",
+          fontSize: isSmallMobile ? "25px" : "40px",
           fontWeight: "700",
           color: "white",
           textAlign: "center",
@@ -80,8 +86,8 @@ const Contact = () => {
       <Typography
         sx={{
           textAlign: "center",
-          fontSize: "20px",
-          width: "65%",
+          fontSize: isSmallMobile ? "15px" : "20px",
+          width: isSmallMobile ? "80%" : isTablet ? "70%" : "65%",
           margin: " 20px auto",
           color: "white",
         }}
@@ -96,10 +102,10 @@ const Contact = () => {
           display: "grid",
           gap: "30px",
           gridTemplateColumns: "1fr",
-          padding: "30px",
+          padding: isSmallMobile ? "15px" : "30px",
           border: "1px solid #aaa",
           borderRadius: "20px",
-          width: "60%",
+          width: isSmallMobile ? "100%" : isTablet ? "80%" : "60%",
           margin: "40px auto",
         }}
       >
@@ -153,7 +159,7 @@ const Contact = () => {
               color: "white",
             },
           }}
-          onClick={sendEmail}
+          onClick={(e) => isEmail && isFullname && isMessage && sendEmail(e)}
         >
           Send Message
         </Button>

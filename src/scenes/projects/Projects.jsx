@@ -1,12 +1,15 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import Project from "./Project";
 
 const Projects = () => {
+  const isMobile = useMediaQuery("(max-width:650px)");
+  const isSmallMobile = useMediaQuery("(max-width:450px)");
+  const isTablet = useMediaQuery("(max-width:1000px)");
   return (
     <Box
       sx={{
-        width: "70%",
+        width: isSmallMobile ? "90%" : "70%",
         margin: "auto",
         padding: "20px",
       }}
@@ -17,7 +20,7 @@ const Projects = () => {
         initial={{ opacity: 0, y: 20 }}
         transition={{ duration: 0.5 }}
         sx={{
-          fontSize: "40px",
+          fontSize: isSmallMobile ? "25px" : "40px",
           fontWeight: "700",
           color: "white",
           textAlign: "center",

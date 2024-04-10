@@ -8,8 +8,12 @@ import Footer from "./scenes/footer/Footer";
 import Contact from "./scenes/contact/Contact";
 import Experience from "./scenes/experience/Experience";
 import ParticlesBackground from "./components/ParticlesBackground";
+import { useMediaQuery } from "@mui/material";
 
 function App() {
+  const isSmallMobile = useMediaQuery("(max-width:450px)");
+  const isMobile = useMediaQuery("(max-width:750px)");
+
   return (
     <div className="app">
       <Navbar />
@@ -17,7 +21,7 @@ function App() {
       <section
         id="Home"
         style={{
-          padding: "250px 0 210px 0",
+          padding: isMobile ? "100px 0" : "250px 0 210px 0",
           backgroundColor: "black",
           position: "relative",
           overflow: "hidden",
@@ -42,7 +46,7 @@ function App() {
             height: "150px",
             border: "5px solid #ffc107",
             borderRadius: "20px",
-            right: "-140px",
+            right: isSmallMobile ? "-160px" : "-140px",
             top: "100px",
           }}
         />
@@ -53,7 +57,7 @@ function App() {
             height: "150px",
             backgroundColor: "#ffc107",
             borderRadius: "20px",
-            left: "-50px",
+            left: isSmallMobile ? "-60px" : "-50px",
             bottom: "40%",
           }}
         />
