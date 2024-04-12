@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Typography, useMediaQuery } from "@mui/material";
 const CustomTypography = ({ item }) => {
   const handleClick = () => {
     const section = document.getElementById(`${item}`);
@@ -6,6 +6,8 @@ const CustomTypography = ({ item }) => {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
+  const isTablet = useMediaQuery("(max-width:900px)");
+
   return (
     <Typography
       sx={{
@@ -15,6 +17,7 @@ const CustomTypography = ({ item }) => {
           color: "#ffc107",
         },
         cursor: "pointer",
+        mt: isTablet && "30px",
       }}
     >
       <span

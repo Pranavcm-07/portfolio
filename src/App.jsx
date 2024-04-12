@@ -13,6 +13,7 @@ import { useMediaQuery } from "@mui/material";
 function App() {
   const isSmallMobile = useMediaQuery("(max-width:450px)");
   const isMobile = useMediaQuery("(max-width:750px)");
+  const isTablet = useMediaQuery("(max-width:900px)");
 
   return (
     <div className="app">
@@ -21,7 +22,11 @@ function App() {
       <section
         id="Home"
         style={{
-          padding: isMobile ? "100px 0" : "250px 0 210px 0",
+          padding: isMobile
+            ? "100px 0"
+            : isTablet
+            ? "200px 0"
+            : "250px 0 210px 0",
           backgroundColor: "black",
           position: "relative",
           overflow: "hidden",
