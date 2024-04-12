@@ -1,11 +1,12 @@
 import { Box, Typography, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import Project from "./Project";
+import data from "../../../data/data.json";
 
 const Projects = () => {
-  const isMobile = useMediaQuery("(max-width:650px)");
   const isSmallMobile = useMediaQuery("(max-width:450px)");
-  const isTablet = useMediaQuery("(max-width:1000px)");
+  const { projects } = data;
+
   return (
     <Box
       sx={{
@@ -38,7 +39,9 @@ const Projects = () => {
           margin: "0 auto 80px",
         }}
       />
-      <Project />
+      {projects.map((project, index) => (
+        <Project key={index} project={project} />
+      ))}
     </Box>
   );
 };

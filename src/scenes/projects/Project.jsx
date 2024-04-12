@@ -10,16 +10,7 @@ import CodeIcon from "@mui/icons-material/Code";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-const Project = () => {
-  const st = [
-    "React",
-    "Redux",
-    "Javascript",
-    "MaterialUI",
-    "API",
-    "MongoDB",
-    "NodeJS",
-  ];
+const Project = ({ project }) => {
   const isTablet = useMediaQuery("(max-width:1000px)");
   const isSmallMobile = useMediaQuery("(max-width:400px)");
   const isBigMobile = useMediaQuery("(max-width:800px)");
@@ -38,7 +29,6 @@ const Project = () => {
       style={{
         opacity: opacityProgress,
         scale: scaleProgress,
-        // position: "relative",
       }}
       sx={{
         maxWidth: isTablet ? "100%" : "810px",
@@ -73,7 +63,7 @@ const Project = () => {
           >
             <CardMedia
               component="img"
-              src="../public/so.png"
+              src={`../public/${project.image}`}
               sx={{
                 width: "100%",
                 height: "100%",
@@ -102,19 +92,13 @@ const Project = () => {
               gap: "2px",
             }}
           >
-            <IconButton
-              href="https://github.com/Pranavcm-07/socialmedia-website-frontend.git"
-              target="_blank"
-            >
+            <IconButton href={project.github} target="_blank">
               <CodeIcon
                 sx={{ color: "white", "&:hover": { color: "#ffc107" } }}
               />
             </IconButton>
-            CONNECTIFY
-            <IconButton
-              href="https://connectify-socialmedia.vercel.app"
-              target="_blank"
-            >
+            {project.name}
+            <IconButton href={project.website} target="_blank">
               <LinkIcon
                 sx={{ color: "white", "&:hover": { color: "#ffc107" } }}
               />
@@ -127,8 +111,7 @@ const Project = () => {
               color: "#aaa",
             }}
           >
-            Connectify, a dynamic MERN stack social media website that brings
-            people together in a seamless digital space.
+            {project.description}
           </Typography>
           <Box
             sx={{
@@ -142,7 +125,7 @@ const Project = () => {
               mb: "10px",
             }}
           >
-            {st.map((item, index) => (
+            {project.skills.map((item, index) => (
               <Typography
                 key={index}
                 sx={{

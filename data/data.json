@@ -1,22 +1,4 @@
 {
-    "skills": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "ReactJS",
-        "Python",
-        "Cpp",
-        "Git",
-        "Postman",
-        "MaterialUI",
-        "MongoDB",
-        "MySQL",
-        "NodeJS",
-        "ExpressJS",
-        "Redux",
-        "Versel",
-        "Bootstrap"
-    ],
     "experience":[
         {
             "course":"Computer Science",
@@ -29,6 +11,24 @@
             "timeline":"2022-2026",
             "location":"SSN College Of Engineering",
             "content":"CGPA: 8.66 (1st year)"
+        }
+    ],
+    "projects":[
+        {
+            "name":"CONNECTIFY",
+            "description":"Connectify, a dynamic MERN stack social media website that brings people together in a seamless digital space.",
+            "skills":[
+                "React",
+                "Redux",
+                "Javascript",
+                "MaterialUI",
+                "API",
+                "MongoDB",
+                "NodeJS"
+            ],
+            "github":"https://github.com/Pranavcm-07/socialmedia-website-frontend.git",
+            "website":"https://connectify-socialmedia.vercel.app",
+            "image":"so.png"
         }
     ]
 }
