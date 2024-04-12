@@ -175,7 +175,7 @@ const Home = () => {
         >
           <CardMedia
             component="img"
-            image="../public/profile-avatar.svg"
+            image="profile-avatar.svg"
             sx={{
               width: isMobile ? "60%" : "80%",
               margin: "auto",

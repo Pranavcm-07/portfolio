@@ -63,7 +63,7 @@ const Project = ({ project }) => {
           >
             <CardMedia
               component="img"
-              src={`../public/${project.image}`}
+              src={project.image}
               sx={{
                 width: "100%",
                 height: "100%",

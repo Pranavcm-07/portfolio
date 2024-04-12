@@ -67,7 +67,7 @@ const About = () => {
         >
           <CardMedia
             component="img"
-            image="../public/7712733_3714961.svg"
+            image="7712733_3714961.svg"
             sx={{
               width: isSmallMobile
                 ? "200px"
