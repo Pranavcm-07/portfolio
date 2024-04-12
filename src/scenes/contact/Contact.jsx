@@ -116,10 +116,6 @@ const Contact = () => {
           onChange={handleChange}
           sx={{
             borderRadius: "30px",
-            "&:focus": {
-              color: "#ffc107",
-            },
-            color: "white",
           }}
         />
         <CustomTextField

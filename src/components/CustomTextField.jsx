@@ -17,10 +17,10 @@ const CustomTextField = styled(TextField)({
   "& .MuiInputLabel-root": {
     color: "#aaa",
   },
-  "& .css-1h58xvr-MuiInputBase-root-MuiOutlinedInput-root": {
+  "& .css-1x5jdmq": {
     color: "white",
   },
-  "& .css-wae6gh-MuiInputBase-root-MuiOutlinedInput-root": {
+  "& .css-u36398": {
     color: "white",
   },
 });
