@@ -2,6 +2,7 @@ import {
   Box,
   Button,
   CardMedia,
+  Link,
   Typography,
   useMediaQuery,
 } from "@mui/material";
@@ -119,42 +120,46 @@ const Home = () => {
               Download Resume
             </Typography>
           </Button>
-          <Button
-            component={motion.button}
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <Link
             href="https://github.com/Pranavcm-07"
             target="_blank"
-            sx={{
-              padding: "13px 29px",
-              display: "flex",
-              gap: "7px",
-              alignItems: "center",
-              backgroundColor: "black",
-              borderRadius: "50px",
-              border: "1px solid #ffc107",
-
-              "&:hover": {
-                backgroundColor: "#ffc107",
-                "& .MuiTypography-root": {
-                  color: "white",
-                },
-              },
-              mt: isSmallMobile && "20px",
-            }}
+            underline="none"
           >
-            <Typography
+            <Button
+              component={motion.button}
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               sx={{
-                color: "#ffc107",
-                fontWeight: "700",
-                fontSize: "12px",
-                transition: "0.1s",
+                padding: "13px 29px",
+                display: "flex",
+                gap: "7px",
+                alignItems: "center",
+                backgroundColor: "black",
+                borderRadius: "50px",
+                border: "1px solid #ffc107",
+
+                "&:hover": {
+                  backgroundColor: "#ffc107",
+                  "& .MuiTypography-root": {
+                    color: "white",
+                  },
+                },
+                mt: isSmallMobile && "20px",
               }}
             >
-              GITHUB
-            </Typography>
-          </Button>
+              <Typography
+                sx={{
+                  color: "#ffc107",
+                  fontWeight: "700",
+                  fontSize: "12px",
+                  transition: "0.1s",
+                }}
+              >
+                GITHUB
+              </Typography>
+            </Button>
+          </Link>
         </Box>
       </Box>
       <Box

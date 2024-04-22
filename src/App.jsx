@@ -30,6 +30,7 @@ function App() {
           backgroundColor: "black",
           position: "relative",
           overflow: "hidden",
+          zIndex: 0,
         }}
       >
         <Home />

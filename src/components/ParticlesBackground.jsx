@@ -13,18 +13,14 @@ const ParticlesBackground = () => {
 
   return (
     <Particles
-      style={{
-        position: "absolute",
-        zIndex: -9999,
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-      }}
       id="tsparticles"
       init={particlesInit}
       // loaded={particlesLoaded}
       options={{
+        fullScreen: {
+          zIndex: -1,
+          enable: true,
+        },
         particles: {
           number: {
             value: 50,
