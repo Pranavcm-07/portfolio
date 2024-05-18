@@ -29,6 +29,23 @@
             "github":"https://github.com/Pranavcm-07/socialmedia-website-frontend.git",
             "website":"https://connectify-socialmedia.vercel.app",
             "image":"so.png"
+        },
+        {
+            "name":"OCR Text Extraction",
+            "description":"Android application utilizing OCR technology to convert handwritten marks and attendance records into editable formats, stored in Google Sheets.",
+            "skills":[
+                "Flutter",
+                "Python",
+                "Firebase",
+                "Tensorflow",
+                "OpenCV",
+                "Machine Learning",
+                "Flask",
+                "NumPy"
+            ],
+            "github":"https://github.com/Pranavcm-07/ocr-flutter-project",
+            "website":null,
+            "image":"ocr-project-image.png"
         }
     ]
 }

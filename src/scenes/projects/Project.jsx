@@ -57,7 +57,7 @@ const Project = ({ project }) => {
             height="300px"
             sx={{
               overflow: "hidden",
-              borderRadius: "10px",
+              // borderRadius: "10px",
               position: "relative",
             }}
           >
