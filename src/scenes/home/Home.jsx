@@ -83,47 +83,63 @@ const Home = () => {
             gap: "20px",
           }}
         >
-          <Button
-            component={motion.button}
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+          <Link
+            href="Pranav_updated_resume1.pdf"
+            target="_blank"
+            underline="none"
             sx={{
-              padding: "13px 29px",
-              display: "flex",
-              gap: "7px",
-              alignItems: "center",
-              backgroundColor: "#eee",
-              borderRadius: "50px",
-              "&:hover": {
-                backgroundColor: "#eee",
-                "& svg": {
-                  color: "#ffc107",
-                },
-                "& .MuiTypography-root": {
-                  color: "#ffc107",
-                },
-              },
+              display: "block",
+              width: "max-content",
+              height: "max-content",
             }}
           >
-            <DescriptionIcon
-              sx={{ color: "black", fontSize: "15px", transition: "0.1s" }}
-            />
-            <Typography
+            <Button
+              component={motion.button}
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
               sx={{
-                color: "black",
-                fontWeight: "700",
-                fontSize: "12px",
-                transition: "0.1s",
+                padding: "13px 29px",
+                display: "flex",
+                gap: "7px",
+                alignItems: "center",
+                backgroundColor: "#eee",
+                borderRadius: "50px",
+                "&:hover": {
+                  backgroundColor: "#eee",
+                  "& svg": {
+                    color: "#ffc107",
+                  },
+                  "& .MuiTypography-root": {
+                    color: "#ffc107",
+                  },
+                },
               }}
             >
-              Download Resume
-            </Typography>
-          </Button>
+              <DescriptionIcon
+                sx={{ color: "black", fontSize: "15px", transition: "0.1s" }}
+              />
+              <Typography
+                sx={{
+                  color: "black",
+                  fontWeight: "700",
+                  fontSize: "12px",
+                  transition: "0.1s",
+                }}
+              >
+                Download Resume
+              </Typography>
+            </Button>
+          </Link>
           <Link
             href="https://github.com/Pranavcm-07"
             target="_blank"
             underline="none"
+            sx={{
+              display: "block",
+              width: "max-content",
+              height: "max-content",
+            }}
           >
             <Button
               component={motion.button}
