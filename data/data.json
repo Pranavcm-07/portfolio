@@ -11,9 +11,30 @@
             "timeline":"2022-2026",
             "location":"SSN College Of Engineering",
             "content":"CGPA: 8.66 (1st year)"
+        },
+        {
+            "course": "Full-Stack Intern",
+            "timeline": "June - Oct 2024",
+            "location": "Swimingo",
+            "content": "Remote (Ontario, Canada)"
         }
     ],
     "projects":[
+        {
+            "name": "NexEvent",
+            "description": "NexEvent is a modern event management web application for seamless event search, booking, and management.",
+            "skills": [
+                "NextJs",
+                "Typescript",
+                "TailwindCSS",
+                "MongoDB",
+                "NodeJS",
+                "Razorpay"
+            ],
+            "github": "/",
+            "website": "https://nexevent-pranav.vercel.app/",
+            "image": "nexEvent-landing-page.png"
+        },
         {
             "name":"CONNECTIFY",
             "description":"Connectify, a dynamic MERN stack social media website that brings people together in a seamless digital space.",

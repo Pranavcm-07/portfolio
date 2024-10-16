@@ -16,6 +16,10 @@ import {
   PythonIcon,
   ExpressJSIcon,
   CSSIcon,
+  NextJSIcon,
+  TypescriptIcon,
+  TailwindCSSIcon,
+  GolangIcon,
 } from "../../../public/icons/icons";
 import { motion } from "framer-motion";
 import ScrollBox from "../../components/Style";
@@ -81,14 +85,18 @@ const Skills = () => {
           <HTMLIcon width="50px" height="50px" />
           <CSSIcon />
           <JavascriptIcon />
+          <TypescriptIcon />
           <ReactJSIcon />
+          <NextJSIcon />
           <NodeJSIcon />
           <ExpressJSIcon />
           <MongoDBIcon />
           <MysqlIcon />
           <GitIcon />
+          <GolangIcon />
           <CPPIcon />
           <PythonIcon />
+          <TailwindCSSIcon/>
           <BootstrapIcon />
           <MaterialUIIcon />
           <VerselIcon />
@@ -113,7 +121,9 @@ const Skills = () => {
               <HTMLIcon />
               <CSSIcon />
               <JavascriptIcon />
+              <TypescriptIcon />
               <ReactJSIcon />
+              <NextJSIcon />
               <NodeJSIcon />
               <ExpressJSIcon />
               <MongoDBIcon />
@@ -139,8 +149,10 @@ const Skills = () => {
               }}
             >
               <GitIcon />
+              <GolangIcon />
               <CPPIcon />
               <PythonIcon />
+              <TailwindCSSIcon/>
               <BootstrapIcon />
               <MaterialUIIcon />
               <VerselIcon />

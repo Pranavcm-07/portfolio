@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import {
   Box,
   CardMedia,
@@ -92,11 +93,13 @@ const Project = ({ project }) => {
               gap: "2px",
             }}
           >
-            <IconButton href={project.github} target="_blank">
-              <CodeIcon
-                sx={{ color: "white", "&:hover": { color: "#ffc107" } }}
-              />
-            </IconButton>
+            {project.github && (
+              <IconButton href={project.github} target="_blank">
+                <CodeIcon
+                  sx={{ color: "white", "&:hover": { color: "#ffc107" } }}
+                />
+              </IconButton>
+            )}
             {project.name}
             <IconButton href={project.website} target="_blank">
               <LinkIcon

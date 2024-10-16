@@ -84,7 +84,7 @@ const Home = () => {
           }}
         >
           <Link
-            href="Pranav_updated_resume1.pdf"
+            href="Pranav_updated_resume_3.pdf"
             target="_blank"
             underline="none"
             sx={{
